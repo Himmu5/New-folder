@@ -1,15 +1,23 @@
 import './App.css';
 import Navbar from './Navbar';
-import AllContant from './AllContant';
+import MainContant from './MainContant'
 import Footer from './Footer';
+import Card from './Card'
+import {Routes, Route} from 'react-router-dom'
 function App() {
-  return (
-    <div class="bg-gray-100">
-      
-      <Navbar />
-      <AllContant />
-      <Footer /> 
 
+  return (
+    <div className="bg-gray-100">
+      
+      <Navbar /> 
+      
+      <Routes>
+
+      <Route path="/" element={<MainContant />} />
+      <Route path="/Card" element={<Card/>} />
+
+      </Routes>
+      <Footer />  
     </div>
   );
 }
